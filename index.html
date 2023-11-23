@@ -1,4 +1,13 @@
-<form name="myform" action="/" method="POST">
+<html>
+<head>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Complete!";
+}
+</script>
+</head>
+
+<form name="myform" action="/">
     Name:<br>
     <input type="text" name="name"><br> Pick a type of bread <br>
     <select name="mydropdown">
@@ -7,5 +16,6 @@
         <option value="White">White</option>
     </select><br>
     <input type="checkbox" name="cheese" value="yes">Additional Cheese<br>
-    <input type="submit" value="Submit your choice">
+    <button type="button" onclick="myFunction()">Submit your Choice</button>
+    <p id="demo">Order Incomplete</p>
 </form>
