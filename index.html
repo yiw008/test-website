@@ -2,20 +2,25 @@
 <head>
 <script>
 function myFunction() {
-  document.getElementById("demo").innerHTML = "Complete!";
+  let nameInput = document.getElementById("name-input");
+  if (nameInput.value) {
+    document.getElementById("demo").innerHTML = "Complete!";
+    document.getElementById("name").style.display = "none";
+    document.getElementById("name-input").style.display = "none";
+  }
 }
 </script>
 </head>
 
 <form name="myform" action="/">
-    Name:<br>
-    <input type="text" name="name"><br> Pick a type of bread <br>
-    <select name="mydropdown">
+    <p id="name">Name:</p>
+    <input type="text" name="name" id="name-input"><br> Pick a type of bread <br>
+    <select name="mydropdown" id="mydropdown">
         <option value="Italian">Italian</option>
         <option value="Wheat">Wheat</option>
         <option value="White">White</option>
     </select><br>
-    <input type="checkbox" name="cheese" value="yes">Additional Cheese<br>
-    <button type="button" onclick="myFunction()">Submit your Choice</button>
+    <input type="checkbox" name="cheese" value="yes" id="cheese">Additional Cheese<br>
+    <button type="button" onclick="myFunction()" id="button">Submit your Choice</button>
     <p id="demo">Order Incomplete</p>
 </form>
