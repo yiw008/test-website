@@ -8,6 +8,7 @@ function myFunction() {
     document.getElementById("name-input").style.display = "none";
     document.getElementById("bread").style.display = "none";
     document.getElementById("mydropdown").style.display = "none";
+    document.getElementById("cheese-input").style.display = "none";
     document.getElementById("cheese").style.display = "none";
     document.getElementById("button").style.display = "none";
     document.getElementById("message").innerHTML = "Complete! Refresh to make another order";
@@ -28,7 +29,8 @@ function myFunction() {
         <option value="Wheat">Wheat</option>
         <option value="White">White</option>
     </select><br>
-    <input type="checkbox" name="cheese" value="yes" id="cheese">Additional Cheese<br>
+    <input type="checkbox" name="cheese-input" value="yes" id="cheese">
+    <p id="cheese">Additional Cheese</p>
     <button type="button" onclick="myFunction()" id="button">Submit your Choice</button>
     <p id="message">Order Incomplete</p>
 </form>
