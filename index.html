@@ -4,17 +4,25 @@
 function myFunction() {
   let nameInput = document.getElementById("name-input");
   if (nameInput.value) {
-    document.getElementById("demo").innerHTML = "Complete!";
     document.getElementById("name").style.display = "none";
     document.getElementById("name-input").style.display = "none";
+    document.getElementById("bread").style.display = "none";
+    document.getElementById("mydropdown").style.display = "none";
+    document.getElementById("cheese").style.display = "none";
+    document.getElementById("button").style.display = "none";
+    document.getElementById("message").innerHTML = "Complete! Refresh to make another order";
+  } else {
+    document.getElementById("message").innerHTML = "Order Incomplete! You need you write your name!";
   }
 }
 </script>
 </head>
 
+<body>
 <form name="myform" action="/">
     <p id="name">Name:</p>
-    <input type="text" name="name" id="name-input"><br> Pick a type of bread <br>
+    <input type="text" name="name" id="name-input"><br>
+    <p id="bread">Pick a type of bread</p>
     <select name="mydropdown" id="mydropdown">
         <option value="Italian">Italian</option>
         <option value="Wheat">Wheat</option>
@@ -22,5 +30,7 @@ function myFunction() {
     </select><br>
     <input type="checkbox" name="cheese" value="yes" id="cheese">Additional Cheese<br>
     <button type="button" onclick="myFunction()" id="button">Submit your Choice</button>
-    <p id="demo">Order Incomplete</p>
+    <p id="message">Order Incomplete</p>
 </form>
+</body>
+</html>
