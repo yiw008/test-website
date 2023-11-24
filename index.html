@@ -32,7 +32,7 @@ const message = document.getElementById("message");
 
 form.addEventListener('submit', (event) => {
     if (nameInput.value) {
-        form.style.display = "none";
+        form.remove();
         message.innerHTML = "Complete! Refresh to make another order.";
         let para = document.createElement("p");
         let orderMessage = "Order by " + nameInput.value + ": " + mydropdown.value;
